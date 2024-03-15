@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="asset/css/style.css">
+
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>ABESIT</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="asset/images/sim-logo.png" alt="">
+            </div>
+
+            <span class="logo_name">
+                <h1>SIM</h1>
+                <p>Student Interface</p>
+            </span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-search">
+                <li>
+                    <a href="#">
+                        <i class="uil uil-search"></i>
+                        <input type="search" class="link-name" placeholder="Search..." />
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav-links">
+                <li><a href="#">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Dashboard</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-calendar-alt"></i>
+                        <span class="link-name">My Calendar</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-diary"></i>
+                        <span class="link-name">Course Planner</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-books"></i>
+                        <span class="link-name">Library</span>
+                    </a></li>
+                <li><a href="finance.html">
+                        <i class="uil uil-university "></i>
+                        <span class="link-name">Finance</span>
+                    </a></li>
+                <li><a href="student.html">
+                        <i class="uil uil-user"></i>
+                        <span class="link-name">Student Details</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-edit"></i>
+                        <span class="link-name">Faculty Feedback</span>
+                    </a></li>
+            </ul>
+
+
+            <ul class="logout-mode">
+                <li><a href="login.html">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <div id="moon-sun">
+                            <i class='uil uil-brightness'></i>
+                        </div>
+                        <span class="link-name" id="link-text">Light Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <div class="abesit">
+                <i class="uil uil-bars sidebar-toggle"></i>
+                <span class="logo_name clg-logo">
+                    <img src="asset/images/logo.png" alt="">
+                </span>
+            </div>
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+
+            <div class="avatar">
+                <img src="asset/images/avatar.png" alt="">
+                <h3>Fidel</h3>
+                <i class="uil uil-angle-down"></i>
+            </div>
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Quick Insight</span>
+                </div>
+
+                <div class="boxes">
+                    <div class="box box1">
+                        <i class="uil uil-analytics"></i>
+                        <span class="text">Attendance</span>
+                        <span class="number progress-wrapper">
+                            <div class="progress-bar">
+                                <div class="progress lessthan">
+                                    <div class="atd">1</div>
+                                    <span class="tooltip-text" id="bottom">
+                                        <strong>Attendance: </strong> Less than 75% <br>
+                                        <strong>Total Subject(s):</strong>
+                                        1</span>
+                                </div>
+                                <div class="progress morethan">
+                                    <div class="atd">2</div>
+                                    <span class="tooltip-text" id="bottom">
+                                        <strong>Attendance: </strong>75% - 85%<br>
+                                        <strong>Total Subject(s):</strong>
+                                        2</span>
+                        </span>
+                    </div>
+                    <div class="progress equalto">
+                        <div class="atd">5</div>
+                        <span class="tooltip-text" id="bottom"><strong>Attendance: </strong> above 85% <br>
+                            <strong>Total Subject(s):</strong>
+                            5</span></span>
+                    </div>
+                </div>
+                </span>
+                <div class="more">
+                    <h6>More Details</h6>
+                    <i class="uil uil-angle-right"></i>
+                </div>
+            </div>
+            <div class="box box2">
+                <i class="uil uil-money-withdrawal"></i>
+                <span class="text">Fees Due:</span>
+                <span class="number">Ksh. 20,120
+                </span>
+                <div class="more">
+                    <h6>More Details</h6>
+                    <i class="uil uil-angle-right"></i>
+                </div>
+            </div>
+            <div class="box box3">
+                <i class="uil uil-edit-alt"></i>
+                <span class="text">Upcoming Exam:</span>
+                <span class="number">
+                    <p>Computer Graphics</p>
+                    <p id="data">26-04-2024</p>
+                </span>
+                <div class="more">
+                    <h6>More Details</h6>
+                    <i class="uil uil-angle-right"></i>
+                </div>
+            </div>
+            <div class="box box4">
+                <i class="uil uil-share"></i>
+                <span class="text">Upcoming Event:</span>
+                <span class="number">
+                    <p>Farewell Party</p>
+                    <p id="data">06-05-2024</p>
+                </span>
+                <div class="more">
+                    <h6>More Details</h6>
+                    <i class="uil uil-angle-right"></i>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="activity">
+            <div class="title">
+                <i class="uil uil-clock-three"></i>
+                <span class="text">Recent Activity</span>
+            </div>
+
+            <div class="activity-data">
+
+                <div class="myweektabs weekly-classes acts">
+
+                    <input type="radio" id="schedule" name="myweektabs" checked="checked">
+                    <label for="schedule">My Schedule</label>
+                    <div class="weektab">
+                        <h2>Class Schedule</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Sr. No.</td>
+                                    <td>Subject Name</td>
+                                    <td>Subject Code</td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>1.</td>
+                                <td>Computer Graphics</td>
+                                <td>COMP 101</td>
+
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td>DSA</td>
+                                <td>COMP 121</td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td>Operating System</td>
+                                <td>COMP 141</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <input type="radio" id="assignments" name="myweektabs">
+                    <label for="assignments">My Assignments</label>
+                    <div class="weektab">
+                        <h2>Assignments</h2>
+                        <p>RENEWABLE ENERGY RESOURCES UNIT 5</p>
+                        <a
+                            href="https://docs.google.com/document/d/15m0DNutMu5dkYCettQ7uCZtzguVoJEIg/edit?usp=sharing&ouid=113145812844806807198&rtpof=true&sd=true">Assignment
+                            2</a>
+                    </div>
+
+                </div>
+
+                <div class="weekly-attendance acts">
+                    <label>Weekly Attendance</label>
+                    <div class="attendance_wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Sr. No.</td>
+                                    <td>Subject Name</td>
+                                    <td>Subject Code</td>
+                                    <td>Attended/Delivered</td>
+                                    <td>Percent</td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>1.</td>
+                                <td>Computer Graphics</td>
+                                <td>COMP 101</td>
+                                <td>9/10</td>
+                                <td>90%</td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td>DSA</td>
+                                <td>COMP 121</td>
+                                <td>9/10</td>
+                                <td>90%</td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td>Operating System</td>
+                                <td>COMP 141</td>
+                                <td>9/10</td>
+                                <td>90%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mytabs">
+            <input type="radio" id="news" name="mytabs" checked="checked">
+            <label for="news">News</label>
+            <div class="tab">
+                <h2>News</h2>
+                <p>Here a news will be displayed.</p>
+            </div>
+
+            <input type="radio" id="notice" name="mytabs">
+            <label for="notice">Notice</label>
+            <div class="tab">
+                <h2>Notice</h2>
+                <p>Here a notice will be displayed.</p>
+            </div>
+
+            <input type="radio" id="alerts" name="mytabs">
+            <label for="alerts">Alerts</label>
+            <div class="tab">
+                <h2>Alerts</h2>
+                <p>Here a alerts will be displayed.</p>
+            </div>
+
+        </div>
+        </div>
+        </div>
+    </section>
+    <div class="footer-section">
+        <footer>&copy; 2024 MOLDAY & PUNDIT</footer>
+    </div>
+
+
+    <script src="asset/js/script.js"></script>
+</body>
+
+</html>
