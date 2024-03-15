@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="login.css">
+
+    <title>Sim Portal Login Page</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login__content">
+            <img src="bg-login.jpg" alt="login image" class="login__img">
+
+            <form action="" class="login__form">
+                <div class="login__profile">
+                    <div class="input-profile">
+                        <input type="radio" name="profile" id="student-profile" value="student"
+                            class="login__radio-input" required>
+                        <label for="student-profile" class="login__label-profile">Student</label>
+                    </div>
+
+                    <div class="input-profile">
+                        <input type="radio" name="profile" id="parent-profile" value="parent" class="login__radio-input"
+                            required>
+                        <label for="parent-profile" class="login__label-profile">Parent</label>
+                    </div>
+                </div>
+
+                <div>
+                    <h1 class="login__title">
+                        <span>Welcome</span> Back
+                    </h1>
+                    <p class="login__description">
+                        Welcome! Please login to continue.
+                    </p>
+                </div>
+
+                <div>
+                    <div class="login__inputs">
+                        <div>
+                            <label for="" class="login__label">Username</label>
+                            <input type="text" placeholder="Enter your username" pattern="[0-9]{4}[a-z]{2}[0-9]{3}"
+                                required class="login__input">
+                        </div>
+
+                        <div>
+                            <label for="" class="login__label">Password</label>
+
+                            <div class="login__box">
+                                <input type="password" placeholder="Enter your password" required class="login__input"
+                                    id="input-pass">
+                                <i class="ri-eye-off-line login__eye" id="input-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="login__check">
+                            <input type="checkbox" class="login__check-input">
+                            <label for="" class="login__check-label">Remember me</label>
+                        </div>
+
+                        <div>
+                            <canvas class="login__captcha" id="captcha">Captcha Text</canvas>
+                            <input type="text" placeholder="Enter above captcha" required class="login__input"
+                                id="input-captcha">
+                        </div>
+                        <!-- <span id="output"></span> -->
+                    </div>
+                </div>
+
+                <div>
+                    <div class="login__buttons">
+                        <!-- <a href=""><button class="login__button" id="input-button">Login</button></a> -->
+                        <button class="login__button" id="input-button"><a href="../index.html">Login</a></button>
+                        <!-- <button class="login__button login__button-ghost">Sign Up</button> -->
+                    </div>
+
+                    <a href="#" class="login__forgot">Forgot Passowrd?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="login.js"></script>
+</body>
+
+</html>
