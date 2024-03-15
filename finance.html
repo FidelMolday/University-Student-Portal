@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        #balances, #transactions {
+            margin-bottom: 30px;
+        }
+
+        #balance-list, #transaction-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .transaction {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .transaction:hover {
+            background-color: #f9f9f9;
+        }
+    </style>
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="asset/css/style.css">
+
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+<body>
+    <header>
+        <h1>Finance Portal</h1>
+    </header>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="asset/images/sim-logo.png" alt="">
+            </div>
+
+            <span class="logo_name">
+                <h1>SIM</h1>
+                <p>Student Interface</p>
+            </span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-search">
+                <li>
+                    <a href="#">
+                        <i class="uil uil-search"></i>
+                        <input type="search" class="link-name" placeholder="Search..." />
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav-links">
+                <li><a href="../index.html">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Dashboard</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-calendar-alt"></i>
+                        <span class="link-name">My Calendar</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-diary"></i>
+                        <span class="link-name">Course Planner</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-books"></i>
+                        <span class="link-name">Library</span>
+                    </a></li>
+                <li><a href="finance.html">
+                        <i class="uil uil-university "></i>
+                        <span class="link-name">Finance</span>
+                    </a></li>
+                <li><a href="student.html">
+                        <i class="uil uil-user"></i>
+                        <span class="link-name">Student Details</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-edit"></i>
+                        <span class="link-name">Faculty Feedback</span>
+                    </a></li>
+            </ul>
+
+
+            <ul class="logout-mode">
+                <li><a href="login.html">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <div id="moon-sun">
+                            <i class='uil uil-brightness'></i>
+                        </div>
+                        <span class="link-name" id="link-text">Light Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <section id="balances">
+            <h2>Account Balances</h2>
+            <div id="balance-list">
+                <!-- Balance information will be dynamically added here -->
+            </div>
+        </section>
+        <section id="transactions">
+            <h2>Fee Statements</h2>
+            <ul id="transaction-list">
+                <!-- Transaction history will be dynamically added here -->
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        // Sample data for demonstration
+        const balances = [
+            { account: 'Total Fees', balance: 35000 },
+            { account: 'Amount Paid', balance: 15500 },
+            { account: 'Balance', balance: 19500 }
+        ];
+
+        const transactions = [
+            { date: '2024-03-01', description: 'First Year Payment', amount: 30000 },
+            { date: '2024-03-05', description: 'Second Year Payment', amount: 30000 },
+            { date: '2024-03-10', description: 'Third Year Payment', amount: 15500 }
+        ];
+
+        // Function to display account balances
+        function displayBalances() {
+            const balanceList = document.getElementById('balance-list');
+            balanceList.innerHTML = '';
+
+            balances.forEach(balance => {
+                const listItem = document.createElement('div');
+                listItem.textContent = `${balance.account}: Ksh.${balance.balance}`;
+                balanceList.appendChild(listItem);
+            });
+        }
+
+        // Function to display transaction history
+        function displayTransactions() {
+            const transactionList = document.getElementById('transaction-list');
+            transactionList.innerHTML = '';
+
+            transactions.forEach(transaction => {
+                const listItem = document.createElement('li');
+                listItem.classList.add('transaction');
+                listItem.textContent = `${transaction.date} - ${transaction.description} (Ksh.${transaction.amount})`;
+                transactionList.appendChild(listItem);
+            });
+        }
+
+        // Display initial data
+        displayBalances();
+        displayTransactions();
+    </script>
+    <script src="asset/js/script.js"></script>
+</body>
+</html>
